@@ -1,8 +1,8 @@
 num_gpu = 1
 expname = blurball_full
-basedir = <specify_the_path_to_save_weights_and_logs_here>
-datadir = <specify_the_data_path_here>
-tbdir = <specify_the_path_to_save_tensorboard_here>
+basedir = ./Weights
+datadir = ./Datasets
+tbdir = ./Tensors
 dataset_type = llff
 factor = 4
 llffhold = 7
