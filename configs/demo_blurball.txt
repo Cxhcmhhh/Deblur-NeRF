@@ -1,8 +1,8 @@
 num_gpu = 1
 expname = blurball_full
-basedir = ./Weights
-datadir = ./Datasets
-tbdir = ./Tensors
+basedir = /Weights
+datadir = /Datasets
+tbdir = /Tensors
 dataset_type = llff
 factor = 4
 llffhold = 7
