@@ -42,7 +42,7 @@ def config_parser():
                         help='layers in fine network')
     parser.add_argument("--netwidth_fine", type=int, default=256,
                         help='channels per layer in fine network')
-    parser.add_argument("--N_rand", type=int, default=32 * 32 * 4,
+    parser.add_argument("--N_rand", type=int, default=128,
                         help='batch size (number of random rays per gradient step)')
     parser.add_argument("--lrate", type=float, default=5e-4,
                         help='learning rate')
@@ -50,9 +50,9 @@ def config_parser():
                         help='exponential learning rate decay (in 1000 steps)')
     # generate N_rand # of rays, divide into chunk # of batch
     # then generate chunk * N_samples # of points, divide into netchunk # of batch
-    parser.add_argument("--chunk", type=int, default=1024 * 32,
+    parser.add_argument("--chunk", type=int, default=384,
                         help='number of rays processed in parallel, decrease if running out of memory')
-    parser.add_argument("--netchunk", type=int, default=1024 * 64,
+    parser.add_argument("--netchunk", type=int, default=768,
                         help='number of pts sent through network in parallel, decrease if running out of memory')
     parser.add_argument("--no_reload", action='store_true',
                         help='do not reload weights from saved ckpt')
